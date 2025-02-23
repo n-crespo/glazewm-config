@@ -151,6 +151,10 @@ workspaces:
     keep_alive: false
 
 window_rules:
+  - commands: ["set-tiling"]
+    match:
+      - window_process: { equals: "Ticktick" }
+
   - commands: ["ignore"]
     match:
       # Ignores any yasb windows.
@@ -164,7 +168,7 @@ window_rules:
 
       - window_process:
           {
-            regex: "TickTick|ScreenClippingHost|Wintoys|msrdc|GHelper|QuickLook|ScreenColorPicker|LockApp|Flow.Launcher",
+            regex: "ScreenClippingHost|Wintoys|msrdc|GHelper|QuickLook|ScreenColorPicker|LockApp|Flow.Launcher",
           }
       - window_title: { regex: "Window Spy for AHKv2" }
       # - window_class: { regex: "^HwndWrapper[TickTick.exe;;.*$" }
@@ -186,6 +190,7 @@ window_rules:
 
   - commands: ["move --workspace 14"]
     match:
+      - window_process: { equals: "TickTick" }
       - window_title: { regex: "^TickTick -*" }
         window_process: { regex: "brave" }
 
