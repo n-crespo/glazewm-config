@@ -196,6 +196,7 @@ window_rules:
 
   - commands: ["move --workspace 11"]
     match:
+      - window_title: { equals: "Gmail" }
       - window_title:
           {
             regex: "(Gmail - Inbox( \\(\\d+\\))? - nicolasecrespo@gmail.com - Gmail)",
@@ -203,6 +204,7 @@ window_rules:
 
   - commands: ["move --workspace 12"]
     match:
+      - window_title: { equals: "Gmail - Google Apps for UCLA Mail" }
       - window_title:
           {
             regex: "(Gmail - Inbox( \\(\\d+\\))? - ncrespo@g.ucla.edu - Google Apps for UCLA Mail)",
