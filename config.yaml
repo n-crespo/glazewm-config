@@ -100,6 +100,7 @@ window_behavior:
       shown_on_top: true
 
     fullscreen:
+      border: false
       # Maximize the window if possible. If the window doesn't have a
       # maximize button, then it'll be fullscreen'ed normally instead.
       maximized: false
@@ -185,7 +186,7 @@ window_rules:
           }
       - window_process:
           {
-            regex: "explorer|Notepad|sublime_text|neovide|Photos|Discord|Steam|BCUninstaller|ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|OpenConsole|Taskmgr|Beeper|procexp",
+            regex: "FPilot|explorer|Notepad|sublime_text|neovide|Photos|Discord|Steam|BCUninstaller|ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|OpenConsole|Taskmgr|Beeper|procexp",
           }
 
   - commands: ["move --workspace 14"]
