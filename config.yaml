@@ -169,7 +169,7 @@ window_rules:
 
       - window_process:
           {
-            regex: "ScreenClippingHost|Wintoys|msrdc|GHelper|QuickLook|ScreenColorPicker|LockApp|Flow.Launcher",
+            regex: "ScreenClippingHost|Wintoys|GHelper|QuickLook|ScreenColorPicker|LockApp|Flow.Launcher",
           }
       - window_title: { regex: "Window Spy for AHKv2" }
       # - window_class: { regex: "^HwndWrapper[TickTick.exe;;.*$" }
@@ -186,7 +186,7 @@ window_rules:
           }
       - window_process:
           {
-            regex: "FPilot|explorer|Notepad|sublime_text|neovide|Photos|Discord|Steam|BCUninstaller|ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|OpenConsole|Taskmgr|Beeper|procexp",
+            regex: "FPilot|explorer|Notepad|msrdc|sublime_text|neovide|Photos|Discord|Steam|BCUninstaller|ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|OpenConsole|Taskmgr|Beeper|procexp",
           }
 
   - commands: ["move --workspace 14"]
