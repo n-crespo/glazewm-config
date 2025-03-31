@@ -167,10 +167,10 @@ window_rules:
 
       - window_title: { regex: "Focus Timer" } # Win + R
 
-      - window_process:
-          {
-            regex: "ScreenClippingHost|Wintoys|GHelper|QuickLook|ScreenColorPicker|LockApp|Flow.Launcher",
-          }
+      - window_process: { regex: "ScreenClippingHost|Wintoys" }
+      - window_process: { equals: "GHelper" }
+      - window_process: { equals: "QuickLook" }
+      - window_process: { regex: "ScreenColorPicker|LockApp|Flow.Launcher" }
       - window_title: { regex: "Window Spy for AHKv2" }
       # - window_class: { regex: "^HwndWrapper[TickTick.exe;;.*$" }
 
@@ -181,12 +181,14 @@ window_rules:
             regex: "Go to|This PC|Picture in picture|Sync to Most Recent Page Read|Bitwarden",
           }
       - window_class:
+          { regex: "ApplicationFrameWindow|HwndWrapper*|#32770|SunAwtDialog" }
+      - window_process:
           {
-            regex: "ApplicationFrameWindow|HwndWrapper*|open|#32770|SunAwtDialog",
+            regex: "explorer|Notepad|msrdc|sublime_text|neovide|Photos|Steam|open|Beeper|procexp",
           }
       - window_process:
           {
-            regex: "explorer|Notepad|msrdc|sublime_text|neovide|Photos|Steam|BCUninstaller|ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|OpenConsole|Taskmgr|Beeper|procexp",
+            regex: "BCUninstaller|ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|OpenConsole|Taskmgr",
           }
 
   - commands: ["move --workspace 14"]
@@ -218,6 +220,7 @@ window_rules:
   - commands: ["move --workspace 10"]
     match:
       - window_process: { equals: "Beeper" }
+      - window_process: { equals: "Discord" }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
