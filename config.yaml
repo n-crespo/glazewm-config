@@ -222,6 +222,7 @@ window_rules:
     match:
       - window_process: { equals: "Beeper" }
       - window_process: { equals: "Discord" }
+      - window_process: { equals: "Legcord" }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
