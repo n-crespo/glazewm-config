@@ -195,7 +195,7 @@ window_rules:
           { regex: "ApplicationFrameWindow|HwndWrapper*|#32770|SunAwtDialog" }
       - window_process:
           {
-            regex: "explorer|Notepad|msrdc|sublime_text|neovide|Photos|Steam|open|Beeper|procexp",
+            regex: "explorer|Notepad|msrdc|sublime_text|neovide|Photos|Steam|open|Beeper|procexp|PhoneExperienceHost",
           }
       - window_process:
           {
@@ -232,6 +232,7 @@ window_rules:
     match:
       - window_process: { equals: "Beeper" }
       - window_process: { equals: "Discord" }
+      - window_process: { equals: "PhoneExperienceHost" }
       - window_process: { equals: "Legcord" }
 
 binding_modes:
