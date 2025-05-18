@@ -345,20 +345,23 @@ keybindings:
   # Launch CMD terminal. Alternatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
-  - commands: ["shell-exec wt"]
-    bindings: ["alt+enter"]
 
-  - commands: ['shell-exec wt --profile "PowerShell"']
-    bindings: ["alt+shift+enter"]
+  # THESE ARE MANAGED BY autohotkey
 
-  - commands: ["shell-exec brave --profile-directory=default"]
-    bindings: ["alt+w"]
+  # - commands: ['shell-exec wt --profile "WSL (default)"']
+  #   bindings: ["alt+enter"]
 
-  - commands: ['shell-exec brave --profile-directory="Profile 1"']
-    bindings: ["alt+shift+w"]
+  # - commands: ['shell-exec wt --profile "PowerShell"']
+  #   bindings: ["alt+shift+enter"]
 
-  - commands: ["shell-exec wt nt -c btop"]
-    bindings: ["alt+b"]
+  # - commands: ["shell-exec brave --profile-directory=default"]
+  #   bindings: ["alt+w"]
+  #
+  # - commands: ['shell-exec brave --profile-directory="Profile 1"']
+  #   bindings: ["alt+shift+w"]
+  #
+  # - commands: ["shell-exec wt nt -c btop"]
+  #   bindings: ["alt+b"]
 
   # - commands: ["shell-exec brave"]
   #   bindings: ["alt+shift+w"]
