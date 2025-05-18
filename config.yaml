@@ -346,25 +346,25 @@ keybindings:
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
 
-  # THESE ARE MANAGED BY autohotkey
+  # THESE ARE ALSO MANAGED BY AUTOHOTKEY
 
-  # - commands: ['shell-exec wt --profile "WSL (default)"']
-  #   bindings: ["alt+enter"]
+  - commands: ['shell-exec wt --profile "WSL (default)"']
+    bindings: ["alt+enter"]
 
-  # - commands: ['shell-exec wt --profile "PowerShell"']
-  #   bindings: ["alt+shift+enter"]
+  - commands: ['shell-exec wt --profile "PowerShell"']
+    bindings: ["alt+shift+enter"]
 
-  # - commands: ["shell-exec brave --profile-directory=default"]
-  #   bindings: ["alt+w"]
-  #
-  # - commands: ['shell-exec brave --profile-directory="Profile 1"']
-  #   bindings: ["alt+shift+w"]
-  #
-  # - commands: ["shell-exec wt nt -c btop"]
-  #   bindings: ["alt+b"]
+  - commands: ["shell-exec brave --profile-directory=default"]
+    bindings: ["alt+w"]
 
-  # - commands: ["shell-exec brave"]
-  #   bindings: ["alt+shift+w"]
+  - commands: ['shell-exec brave --profile-directory="Profile 1"']
+    bindings: ["alt+shift+w"]
+
+  - commands: ["shell-exec wt nt -c btop"]
+    bindings: ["alt+b"]
+
+  - commands: ["shell-exec brave"]
+    bindings: ["alt+shift+w"]
 
   # Focus the next/previous workspace defined in `workspaces` config.
   - commands: ["focus --next-active-workspace"]
