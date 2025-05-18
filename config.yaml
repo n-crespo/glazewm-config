@@ -143,19 +143,19 @@ workspaces:
 
   - name: "10" # for beeper + phone link (messages)
     display_name: "󰍥"
-    keep_alive: true
+    keep_alive: false
 
   - name: "11"
     display_name: "󰇰" # personal mail
-    keep_alive: true
+    keep_alive: false
 
   - name: "12" # ucla mail
     display_name: "󰻨"
-    keep_alive: true
+    keep_alive: false
 
   - name: "13"
     display_name: "󰝚" # spotify
-    keep_alive: true
+    keep_alive: false
 
   - name: "14"
     display_name: "󰄴" # ticktick
