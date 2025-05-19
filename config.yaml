@@ -111,7 +111,7 @@ window_behavior:
 workspaces:
   - name: "0"
     display_name: "" # terminal
-    keep_alive: true
+    keep_alive: false
 
   - name: "1"
     display_name: "1"
