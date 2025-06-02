@@ -52,7 +52,7 @@ gaps:
   outer_gap:
     top: "1px"
     right: "0px"
-    bottom: "1px"
+    bottom: "0px"
     left: "0px"
 
 window_effects:
@@ -170,6 +170,7 @@ window_rules:
     match:
       # Ignores any yasb windows.
       - window_process: { equals: "yasb" }
+      - window_class: { equals: "XamlExplorerHostIslandWindow" }
 
       # Ignores picture-in-picture windows for browsers.
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
