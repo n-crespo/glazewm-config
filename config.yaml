@@ -203,6 +203,10 @@ window_rules:
             regex: "BCUninstaller|ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|OpenConsole|Taskmgr",
           }
 
+  - commands: ["move --workspace 1"]
+    match:
+      - window_process: { equals: "zen" }
+
   - commands: ["move --workspace 14"]
     match:
       - window_process: { equals: "TickTick" }
@@ -358,8 +362,8 @@ keybindings:
   - commands: ["shell-exec zen"]
     bindings: ["alt+w"]
 
-  # - commands: ['shell-exec brave --profile-directory="Profile 1"']
-  #   bindings: ["alt+shift+w"]
+  - commands: ["shell-exec brave"]
+    bindings: ["alt+shift+w"]
 
   - commands: ["shell-exec wt nt -c btop"]
     bindings: ["alt+b"]
