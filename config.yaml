@@ -162,10 +162,6 @@ workspaces:
     keep_alive: true
 
 window_rules:
-  - commands: ["set-tiling"]
-    match:
-      - window_process: { equals: "Ticktick" }
-
   - commands: ["ignore"]
     match:
       # Ignores any yasb windows.
@@ -202,6 +198,10 @@ window_rules:
           {
             regex: "BCUninstaller|ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|OpenConsole|Taskmgr",
           }
+
+  - commands: ["set-tiling"]
+    match:
+      - window_process: { equals: "TickTick" }
 
   - commands: ["move --workspace 1"]
     match:
