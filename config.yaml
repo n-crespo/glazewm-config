@@ -359,7 +359,7 @@ keybindings:
   - commands: ['shell-exec wt --profile "PowerShell"']
     bindings: ["alt+shift+enter"]
 
-  - commands: ["shell-exec zen"]
+  - commands: ["focus --workspace 1"]
     bindings: ["alt+w"]
 
   - commands: ["shell-exec brave"]
