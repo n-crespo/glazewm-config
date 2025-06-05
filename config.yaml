@@ -205,7 +205,7 @@ window_rules:
 
   - commands: ["move --workspace 1"]
     match:
-      - window_process: { equals: "zen" }
+      - window_process: { equals: "brave" }
 
   - commands: ["move --workspace 14"]
     match:
