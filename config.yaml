@@ -210,8 +210,6 @@ window_rules:
   - commands: ["move --workspace 14"]
     match:
       - window_process: { equals: "TickTick" }
-      - window_title: { regex: "^TickTick -*" }
-        window_process: { regex: "brave" }
 
   - commands: ["move --workspace 11"]
     match:
@@ -359,7 +357,7 @@ keybindings:
   - commands: ['shell-exec wt --profile "PowerShell"']
     bindings: ["alt+shift+enter"]
 
-  - commands: ["focus --workspace 1"]
+  - commands: ["shell-exec brave"]
     bindings: ["alt+w"]
 
   - commands: ["shell-exec brave"]
