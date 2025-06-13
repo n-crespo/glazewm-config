@@ -218,10 +218,16 @@ window_rules:
           {
             regex: "(Gmail - Inbox( \\(\\d+\\))? - nicolasecrespo@gmail.com - Gmail)",
           }
+      - window_title:
+          { equals: "Inbox - nicolasecrespo@gmail.com - Gmail — Ablaze Floorp" }
 
   - commands: ["move --workspace 12"]
     match:
       - window_title: { equals: "Gmail - Google Apps for UCLA Mail" }
+      - window_title:
+          {
+            equals: "Inbox - ncrespo@g.ucla.edu - Google Apps for UCLA Mail — Ablaze Floorp",
+          }
       - window_title:
           {
             regex: "(Gmail - Inbox( \\(\\d+\\))? - ncrespo@g.ucla.edu - Google Apps for UCLA Mail)",
@@ -357,10 +363,10 @@ keybindings:
   - commands: ['shell-exec wt --profile "PowerShell"']
     bindings: ["alt+shift+enter"]
 
-  - commands: ["shell-exec brave"]
-    bindings: ["alt+w"]
+  # - commands: ["shell-exec floorp"]
+  #   bindings: ["alt+w"]
 
-  - commands: ["shell-exec brave"]
+  - commands: ["shell-exec floorp"]
     bindings: ["alt+shift+w"]
 
   - commands: ["shell-exec wt nt -c btop"]
