@@ -364,10 +364,10 @@ keybindings:
   - commands: ['shell-exec wt --profile "PowerShell"']
     bindings: ["alt+shift+enter"]
 
-  # - commands: ["shell-exec floorp"]
-  #   bindings: ["alt+w"]
+  - commands: ["shell-exec zen"]
+    bindings: ["alt+w"]
 
-  - commands: ["shell-exec floorp"]
+  - commands: ["shell-exec zen"]
     bindings: ["alt+shift+w"]
 
   - commands: ["shell-exec wt nt -c btop"]
