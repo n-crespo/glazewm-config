@@ -50,7 +50,7 @@ gaps:
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: "1px"
+    top: "0px"
     right: "0px"
     bottom: "0px"
     left: "0px"
@@ -70,7 +70,7 @@ window_effects:
     # Change the corner style of the window's frame.
     # ** Exclusive to Windows 11 due to API limitations.
     corner_style:
-      enabled: true
+      enabled: false
       # Allowed values: 'square', 'rounded', 'small_rounded'.
       style: "rounded"
 
@@ -145,19 +145,19 @@ workspaces:
     display_name: "󰍥"
     keep_alive: false
 
-  - name: "11"
+  - name: "97"
     display_name: "󰇰" # personal mail
     keep_alive: false
 
-  - name: "12" # ucla mail
-    display_name: "󰻨"
-    keep_alive: false
+  # - name: "12" # ucla mail
+  #   display_name: "󰻨"
+  #   keep_alive: false
 
-  - name: "13"
+  - name: "98"
     display_name: "󰝚" # spotify
     keep_alive: false
 
-  - name: "14"
+  - name: "99"
     display_name: "󰄴" # ticktick
     keep_alive: true
 
@@ -207,11 +207,11 @@ window_rules:
   #   match:
   #     - window_process: { equals: "brave" }
 
-  - commands: ["move --workspace 14"]
+  - commands: ["move --workspace 99"]
     match:
       - window_process: { equals: "TickTick" }
 
-  - commands: ["move --workspace 11"]
+  - commands: ["move --workspace 97"]
     match:
       - window_title: { equals: "Gmail" }
       - window_title:
@@ -220,20 +220,21 @@ window_rules:
           }
       - window_title:
           { equals: "Inbox - nicolasecrespo@gmail.com - Gmail — Ablaze Floorp" }
+      - window_title: { equals: "Gmail — Ablaze Floorp" }
 
-  - commands: ["move --workspace 12"]
-    match:
-      - window_title: { equals: "Gmail - Google Apps for UCLA Mail" }
-      - window_title:
-          {
-            equals: "Inbox - ncrespo@g.ucla.edu - Google Apps for UCLA Mail — Ablaze Floorp",
-          }
-      - window_title:
-          {
-            regex: "(Gmail - Inbox( \\(\\d+\\))? - ncrespo@g.ucla.edu - Google Apps for UCLA Mail)",
-          }
+  # - commands: ["move --workspace 12"]
+  #   match:
+  #     - window_title: { equals: "Gmail - Google Apps for UCLA Mail" }
+  #     - window_title:
+  #         {
+  #           equals: "Inbox - ncrespo@g.ucla.edu - Google Apps for UCLA Mail — Ablaze Floorp",
+  #         }
+  #     - window_title:
+  #         {
+  #           regex: "(Gmail - Inbox( \\(\\d+\\))? - ncrespo@g.ucla.edu - Google Apps for UCLA Mail)",
+  #         }
 
-  - commands: ["move --workspace 13"]
+  - commands: ["move --workspace 98"]
     match:
       - window_process: { equals: "Spotify" }
 
@@ -411,17 +412,15 @@ keybindings:
     bindings: ["alt+8"]
   - commands: ["focus --workspace 9"]
     bindings: ["alt+9"]
-  - commands: ["focus --workspace 13"]
-    bindings: ["alt+s"]
   - commands: ["focus --workspace 10"]
     bindings: ["alt+m"]
-  - commands: ["focus --workspace 11"]
-    bindings: ["alt+p"]
-  - commands: ["focus --workspace 12"]
-    bindings: ["alt+u"]
-  - commands: ["focus --workspace 14"]
-    bindings: ["alt+e"]
-  - commands: ["focus --workspace 14"]
+  - commands: ["focus --workspace 97"]
+    bindings: ["alt+,"]
+  # - commands: ["focus --workspace 12"]
+  #   bindings: ["alt+u"]
+  - commands: ["focus --workspace 98"]
+    bindings: ["alt+s"]
+  - commands: ["focus --workspace 99"]
     bindings: ["alt+e"]
 
   # Move the focused window's parent workspace to a monitor in a given
@@ -458,11 +457,11 @@ keybindings:
     bindings: ["alt+shift+9"]
   - commands: ["move --workspace 10"]
     bindings: ["alt+shift+m"]
-  - commands: ["move --workspace 11"]
+  - commands: ["move --workspace 97"]
     bindings: ["alt+shift+,"]
-  - commands: ["move --workspace 12"]
-    bindings: ["alt+shift+."]
-  - commands: ["move --workspace 13"]
+  # - commands: ["move --workspace 12"]
+  #   bindings: ["alt+shift+."]
+  - commands: ["move --workspace 98"]
     bindings: ["alt+shift+s"]
-  - commands: ["move --workspace 14"]
+  - commands: ["move --workspace 99"]
     bindings: ["alt+shift+e"]
