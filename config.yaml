@@ -111,23 +111,23 @@ window_behavior:
 workspaces:
   - name: "0"
     display_name: "" # terminal
-    keep_alive: true
+    keep_alive: false
 
   - name: "1"
     display_name: "1"
-    keep_alive: true
+    keep_alive: false
   - name: "2"
     display_name: "2"
-    keep_alive: true
+    keep_alive: false
   - name: "3"
     display_name: "3"
-    keep_alive: true
+    keep_alive: false
   - name: "4"
     display_name: "4"
-    keep_alive: true
+    keep_alive: false
   - name: "5"
     display_name: "5"
-    keep_alive: true
+    keep_alive: false
   - name: "6"
     display_name: "6"
     keep_alive: false
