@@ -85,7 +85,7 @@ window_effects:
   other_windows:
     transparency:
       enabled: false
-      opacity: 100%
+      opacity: 90%
     border:
       enabled: true
       color: "#222222"
