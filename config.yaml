@@ -30,7 +30,7 @@ general:
   # effect if `hide_method: 'hide'`.
   # - 'true': Show all windows (regardless of workspace).
   # - 'false': Only show windows from the currently shown workspaces.
-  show_all_in_taskbar: false
+  show_all_in_taskbar: true
 
   cursor_jump:
     # Whether to automatically move the cursor on the specified trigger.
@@ -46,14 +46,14 @@ gaps:
   scale_with_dpi: true
 
   # Gap between adjacent windows.
-  inner_gap: "0px"
+  inner_gap: "10px"
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: "0px"
-    right: "0px"
-    bottom: "0px"
-    left: "0px"
+    top: "10px"
+    right: "10px"
+    bottom: "10px"
+    left: "10px"
 
   # # Overrides `outer_gap` when there is just one window on a workspace.
   # single_window_outer_gap:
@@ -69,7 +69,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: "#625e5a"
+      color: "#626462"
 
     hide_title_bar:
       enabled: false
@@ -101,10 +101,10 @@ window_behavior:
   state_defaults:
     floating:
       # Whether to center floating windows by default.
-      centered: true
+      centered: false
 
       # Whether to show floating windows as always on top.
-      shown_on_top: true
+      shown_on_top: false
 
     fullscreen:
       border: false
@@ -113,7 +113,7 @@ window_behavior:
       maximized: false
 
       # Whether to show fullscreen windows as always on top.
-      shown_on_top: true
+      shown_on_top: false
 
 workspaces:
   - name: "0"
