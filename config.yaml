@@ -345,7 +345,7 @@ keybindings:
 
   # Close focused window.
   - commands: ["close"]
-    bindings: ["alt+w"]
+    bindings: ["alt+q"]
 
   # - commands: ["close"]
   #   bindings: ["alt+q"]
@@ -374,7 +374,7 @@ keybindings:
   - commands: ['shell-exec wt --profile "PowerShell"']
     bindings: ["alt+shift+enter"]
 
-  - commands: ["shell-exec brave"]
+  - commands: ["shell-exec zen"]
     bindings: ["alt+b"]
 
   # - commands: ["shell-exec zen"]
