@@ -30,7 +30,7 @@ general:
   # effect if `hide_method: 'hide'`.
   # - 'true': Show all windows (regardless of workspace).
   # - 'false': Only show windows from the currently shown workspaces.
-  show_all_in_taskbar: true
+  show_all_in_taskbar: false
 
   cursor_jump:
     # Whether to automatically move the cursor on the specified trigger.
@@ -131,10 +131,10 @@ workspaces:
     keep_alive: true
   - name: "4"
     display_name: "4"
-    keep_alive: false
+    keep_alive: true
   - name: "5"
     display_name: "5"
-    keep_alive: false
+    keep_alive: true
   - name: "6"
     display_name: "6"
     keep_alive: false
@@ -345,7 +345,10 @@ keybindings:
 
   # Close focused window.
   - commands: ["close"]
-    bindings: ["alt+q"]
+    bindings: ["alt+w"]
+
+  # - commands: ["close"]
+  #   bindings: ["alt+q"]
 
   # Kill GlazeWM process safely.
   - commands: ["wm-exit"]
@@ -372,13 +375,13 @@ keybindings:
     bindings: ["alt+shift+enter"]
 
   - commands: ["shell-exec brave"]
-    bindings: ["alt+w"]
-
-  - commands: ["shell-exec zen"]
-    bindings: ["alt+shift+w"]
-
-  - commands: ["shell-exec wt nt -c btop"]
     bindings: ["alt+b"]
+
+  # - commands: ["shell-exec zen"]
+  #   bindings: ["alt+shift+w"]
+
+  # - commands: ["shell-exec wt nt -c btop"]
+  #   bindings: ["alt+b"]
 
   # - commands: ["shell-exec brave"]
   #   bindings: ["alt+shift+w"]
