@@ -69,7 +69,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: "#626462"
+      color: "#404040"
 
     hide_title_bar:
       enabled: false
@@ -87,7 +87,7 @@ window_effects:
       enabled: false
       opacity: 90%
     border:
-      enabled: true
+      enabled: false
       color: "#222222"
 
 window_behavior:
@@ -101,7 +101,7 @@ window_behavior:
   state_defaults:
     floating:
       # Whether to center floating windows by default.
-      centered: false
+      centered: true
 
       # Whether to show floating windows as always on top.
       shown_on_top: false
@@ -243,7 +243,7 @@ window_rules:
 
   - commands: ["move --workspace 98"]
     match:
-      - window_process: { equals: "Spotify" }
+      - window_process: { regex: "Spotify|ncspot" }
 
   - commands: ["move --workspace 10"]
     match:
@@ -380,11 +380,11 @@ keybindings:
   # - commands: ["shell-exec zen"]
   #   bindings: ["alt+shift+w"]
 
-  # - commands: ["shell-exec wt nt -c btop"]
-  #   bindings: ["alt+b"]
+  - commands: ["focus --workspace 98", "shell-exec wt --focus ncspot"]
+    bindings: ["alt+n"]
 
-  # - commands: ["shell-exec brave"]
-  #   bindings: ["alt+shift+w"]
+  - commands: ["focus --workspace 9", "shell-exec wt --focus btop"]
+    bindings: ["alt+\\"]
 
   # Focus the next/previous workspace defined in `workspaces` config.
   - commands: ["focus --next-active-workspace"]
