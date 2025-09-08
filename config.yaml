@@ -380,10 +380,17 @@ keybindings:
   # - commands: ["shell-exec zen"]
   #   bindings: ["alt+shift+w"]
 
-  - commands: ["focus --workspace 98", "shell-exec wt --focus spotify_player"]
-    bindings: ["alt+n"]
+  - commands: ["focus --workspace 98"]
+    bindings: ["alt+s"]
 
-  - commands: ["focus --workspace 9", "shell-exec wt --focus btop"]
+  - commands:
+      - "focus --workspace 98"
+    bindings: ["alt+n"]
+  #     - 'shell-exec pwsh.exe -WindowStyle Hidden -Command "if (-not (Get-Process spotify_player -ErrorAction SilentlyContinue)) { wt --focus spotify_player }"'
+
+  - commands:
+      - "focus --workspace 9"
+      - 'shell-exec wt --focus btop"'
     bindings: ["alt+\\"]
 
   # Focus the next/previous workspace defined in `workspaces` config.
@@ -428,8 +435,8 @@ keybindings:
   #   bindings: ["alt+,"]
   # - commands: ["focus --workspace 12"]
   #   bindings: ["alt+u"]
-  - commands: ["focus --workspace 98"]
-    bindings: ["alt+s"]
+  # - commands: ["focus --workspace 98"]
+  #   bindings: ["alt+s"]
   - commands: ["focus --workspace 99"]
     bindings: ["alt+e"]
 
