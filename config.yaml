@@ -199,7 +199,7 @@ window_rules:
           { regex: "ApplicationFrameWindow|HwndWrapper*|#32770|SunAwtDialog" }
       - window_process:
           {
-            regex: "explorer|Notepad|msrdc|sublime_text|neovide|Photos|Steam|open|Beeper|procexp|PhoneExperienceHost",
+            regex: "explorer|Notepad|msrdc|sublime_text|Photos|Steam|open|Beeper|procexp|PhoneExperienceHost",
           }
       - window_process:
           {
