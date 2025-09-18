@@ -183,7 +183,7 @@ window_rules:
     match:
       - window_title:
           {
-            regex: "Go to|This PC|Picture in picture|Sync to Most Recent Page Read|Bitwarden",
+            regex: "Go to|This PC|Picture in picture|Sync to Most Recent Page Read",
           }
       - window_class:
           { regex: "ApplicationFrameWindow|HwndWrapper*|#32770|SunAwtDialog" }
@@ -195,8 +195,11 @@ window_rules:
 
   - commands: ["set-floating --centered"]
     match:
+      - window_title: { regex: "Bitwarden" }
       - window_process:
-          { regex: "Photos|Steam|open|Beeper|procexp|PhoneExperienceHost" }
+          {
+            regex: "Photos|Steam|open|Beeper|procexp|PhoneExperienceHost|Bitwarden",
+          }
       - window_process: { regex: "BCUninstaller" }
 
   - commands: ["set-tiling"]
