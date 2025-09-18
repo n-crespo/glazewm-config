@@ -171,8 +171,7 @@ window_rules:
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
         window_class: { regex: "Chrome_WidgetWin_1|MozillaDialogClass" }
 
-      - window_title: { regex: "Focus Timer" } # Win + R
-
+      - window_title: { regex: "Focus Timer" }
       - window_process: { regex: "ScreenClippingHost|Wintoys" }
       - window_process: { equals: "GHelper" }
       - window_process: { equals: "QuickLook" }
