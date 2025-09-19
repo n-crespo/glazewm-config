@@ -153,7 +153,7 @@ workspaces:
     keep_alive: false
 
   - name: "98"
-    display_name: "󰝚" # spotify
+    display_name: "󰎇" # spotify
     keep_alive: false
 
   - name: "99"
