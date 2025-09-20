@@ -87,8 +87,8 @@ window_effects:
       enabled: false
       opacity: 90%
     border:
-      enabled: false
-      color: "#222222"
+      enabled: true
+      color: "#000000"
 
 window_behavior:
   # New windows are created in this state whenever possible.
