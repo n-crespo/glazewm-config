@@ -368,7 +368,7 @@ keybindings:
   - commands:
       - "focus --workspace 9"
       - 'shell-exec wt --focus btop"'
-    bindings: ["alt+i"]
+    bindings: ["alt+\\"]
 
   # Focus the next/previous workspace defined in `workspaces` config.
   - commands: ["focus --next-active-workspace"]
