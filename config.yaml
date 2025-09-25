@@ -166,6 +166,8 @@ window_rules:
       # Ignores any yasb windows.
       - window_process: { equals: "yasb" }
       - window_class: { equals: "XamlExplorerHostIslandWindow" }
+      - window_class:
+          { equals: "Windows.UI.Composition.DesktopWindowContentBridge1" }
       - window_class: { equals: "MozillaDialogClass" }
 
       # Ignores picture-in-picture windows for browsers.
@@ -195,7 +197,8 @@ window_rules:
 
   - commands: ["set-floating --centered"]
     match:
-      # - window_title: { regex: "Bitwarden" }
+      - window_title: { regex: "^Yazi: .+" }
+      - window_title: { regex: "btop4win++" }
       - window_process:
           {
             regex: "Photos|Steam|open|Beeper|procexp|PhoneExperienceHost|Bitwarden",
@@ -363,12 +366,20 @@ keybindings:
   - commands: ['shell-exec wt --profile "PowerShell"']
     bindings: ["alt+shift+enter"]
 
-  - commands: ["shell-exec zen"]
+  - commands: ['shell-exec zen -P "Main"']
     bindings: ["alt+b"]
 
   - commands:
-      - "focus --workspace 9"
-      - 'shell-exec wt --focus btop"'
+      - "shell-exec wt --focus yazi ~/Downloads/"
+    bindings: ["lwin+e"]
+
+  - commands:
+      - "shell-exec wt --focus yazi ~/Downloads/"
+    bindings: ["alt+y"]
+
+  - commands:
+      # - "focus --workspace 9"
+      - "shell-exec wt --focus btop"
     bindings: ["alt+\\"]
 
   # Focus the next/previous workspace defined in `workspaces` config.
