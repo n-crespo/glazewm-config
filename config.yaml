@@ -178,6 +178,7 @@ window_rules:
       - window_process: { regex: "ScreenClippingHost|Wintoys" }
       - window_process: { equals: "GHelper" }
       - window_process: { equals: "QuickLook" }
+      - window_process: { equals: "Blip" }
       - window_process: { regex: "ScreenColorPicker|LockApp|Flow.Launcher" }
       - window_title: { regex: "Window Spy for AHKv2" }
 
@@ -369,9 +370,9 @@ keybindings:
   - commands: ['shell-exec zen -P "Main"']
     bindings: ["alt+b"]
 
-  - commands:
-      - "shell-exec wt --focus yazi ~/Downloads/"
-    bindings: ["lwin+e"]
+  # - commands:
+  #     - "shell-exec wt --focus yazi ~/Downloads/"
+  #   bindings: ["lwin+e"]
 
   - commands:
       - "shell-exec wt --focus yazi ~/Downloads/"
