@@ -466,3 +466,8 @@ keybindings:
     bindings: ["alt+shift+s"]
   - commands: ["move --workspace 99"]
     bindings: ["alt+shift+e"]
+
+  - commands: ["focus --next-active-workspace"]
+    bindings: ["Lwin+Right"]
+  - commands: ["focus --prev-active-workspace"]
+    bindings: ["Lwin+Left"]
