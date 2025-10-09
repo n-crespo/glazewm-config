@@ -200,6 +200,7 @@ window_rules:
     match:
       # - window_title: { regex: "^Yazi: .+" }
       # - window_title: { regex: "btop4win++" }
+      - window_title: { regex: "spotify_player.exe" }
       - window_process:
           {
             regex: "Photos|Steam|open|Beeper|procexp|PhoneExperienceHost|Bitwarden",
@@ -240,6 +241,7 @@ window_rules:
   - commands: ["move --workspace 98"]
     match:
       - window_process: { regex: "Spotify" }
+      - window_title: { regex: "spotify_player.exe" }
 
   - commands: ["move --workspace 10"]
     match:
