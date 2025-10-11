@@ -248,7 +248,7 @@ window_rules:
       - window_process: { equals: "Beeper" }
       - window_process: { equals: "Discord" }
       - window_process: { equals: "PhoneExperienceHost" }
-      - window_process: { equals: "Legcord" }
+      - window_process: { equals: "Dorion" }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
