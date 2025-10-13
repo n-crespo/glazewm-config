@@ -369,7 +369,9 @@ keybindings:
   - commands: ['shell-exec wt --profile "PowerShell"']
     bindings: ["alt+shift+enter"]
 
-  - commands: ['shell-exec zen -P "Main"']
+  # - commands: ['shell-exec zen -P "Main"']
+  #   bindings: ["alt+b"]
+  - commands: ["shell-exec brave"]
     bindings: ["alt+b"]
 
   # - commands:
