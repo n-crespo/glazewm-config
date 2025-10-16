@@ -166,6 +166,7 @@ window_rules:
       # Ignores any yasb windows.
       - window_process: { equals: "yasb" }
       - window_class: { equals: "XamlExplorerHostIslandWindow" }
+      - window_class: { equals: "SumatraWgDefaultWinClass" }
       - window_class:
           { equals: "Windows.UI.Composition.DesktopWindowContentBridge1" }
       - window_class: { equals: "MozillaDialogClass" }
@@ -210,6 +211,7 @@ window_rules:
   - commands: ["set-tiling"]
     match:
       - window_process: { equals: "TickTick" }
+      - window_process: { equals: "SumatraPDF" }
 
   - commands: ["move --workspace 99"]
     match:
