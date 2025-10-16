@@ -366,10 +366,10 @@ keybindings:
   # THESE ARE ALSO MANAGED BY AUTOHOTKEY
 
   - commands: ['shell-exec wt --profile "WSL (default)"']
-    bindings: ["alt+enter"]
+    bindings: ["alt+shift+enter"]
 
   - commands: ['shell-exec wt --profile "PowerShell"']
-    bindings: ["alt+shift+enter"]
+    bindings: ["alt+enter"]
 
   # - commands: ['shell-exec zen -P "Main"']
   #   bindings: ["alt+b"]
