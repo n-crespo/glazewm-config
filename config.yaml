@@ -165,6 +165,7 @@ window_rules:
     match:
       # Ignores any yasb windows.
       - window_process: { equals: "yasb" }
+      - window_process: { equals: "Ditto" }
       - window_class: { equals: "XamlExplorerHostIslandWindow" }
       - window_class: { equals: "SumatraWgDefaultWinClass" }
       - window_class:
