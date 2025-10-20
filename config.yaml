@@ -374,7 +374,7 @@ keybindings:
 
   # - commands: ['shell-exec zen -P "Main"']
   #   bindings: ["alt+b"]
-  - commands: ["shell-exec brave"]
+  - commands: ["shell-exec chrome"]
     bindings: ["alt+b"]
 
   # - commands:
