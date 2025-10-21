@@ -8,7 +8,8 @@ general:
   # shutdown_commands: ["shell-exec taskkill /IM yasb.exe /F"]
 
   # Commands to run after the WM config is reloaded.
-  config_reload_commands: ["shell-exec yasb"]
+  # added keymap to reload yasb individually with autohotkey (alt+shift+y)
+  # config_reload_commands: ["shell-exec --hide-window yasbc reload"]
 
   # Whether to automatically focus windows underneath the cursor.
   focus_follows_cursor: false
