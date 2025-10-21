@@ -163,26 +163,25 @@ workspaces:
 window_rules:
   - commands: ["ignore"]
     match:
-      # Ignores any yasb windows.
-      - window_process: { equals: "yasb" }
-      - window_process: { equals: "Ditto" }
-      - window_class: { equals: "XamlExplorerHostIslandWindow" }
-      - window_class: { equals: "SumatraWgDefaultWinClass" }
-      - window_class:
-          { equals: "Windows.UI.Composition.DesktopWindowContentBridge1" }
-      - window_class: { equals: "MozillaDialogClass" }
-
       # Ignores picture-in-picture windows for browsers.
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
         window_class: { regex: "Chrome_WidgetWin_1" }
 
-      - window_title: { regex: "Focus Timer" }
-      - window_process: { regex: "ScreenClippingHost|Wintoys" }
-      - window_process: { equals: "GHelper" }
-      - window_process: { equals: "QuickLook" }
+      # Ignores any yasb windows.
+      - window_process: { equals: "yasb" }
       - window_process: { equals: "Blip" }
-      - window_process: { regex: "ScreenColorPicker|LockApp|Flow.Launcher" }
+      - window_process: { equals: "Ditto" }
+      - window_process: { equals: "GHelper" }
+      - window_title: { regex: "Focus Timer" }
+      - window_process: { equals: "QuickLook" }
+      - window_class: { equals: "MozillaDialogClass" }
       - window_title: { regex: "Window Spy for AHKv2" }
+      - window_class: { equals: "SumatraWgDefaultWinClass" }
+      - window_process: { regex: "ScreenClippingHost|Wintoys" }
+      - window_class: { equals: "XamlExplorerHostIslandWindow" }
+      - window_process: { regex: "ScreenColorPicker|LockApp|Flow.Launcher" }
+      - window_class:
+          { equals: "Windows.UI.Composition.DesktopWindowContentBridge1" }
 
   - commands: ["set-floating"]
     match:
@@ -200,14 +199,14 @@ window_rules:
 
   - commands: ["set-floating --centered"]
     match:
-      # - window_title: { regex: "^Yazi: .+" }
-      # - window_title: { regex: "btop4win++" }
       - window_title: { regex: "spotify_player.exe" }
       - window_process:
           {
             regex: "Photos|Steam|open|Beeper|procexp|PhoneExperienceHost|Bitwarden",
           }
       - window_process: { regex: "BCUninstaller" }
+      # - window_title: { regex: "^Yazi: .+" }
+      # - window_title: { regex: "btop4win++" }
 
   - commands: ["set-tiling"]
     match:
@@ -229,18 +228,6 @@ window_rules:
           { equals: "Inbox - nicolasecrespo@gmail.com - Gmail — Ablaze Floorp" }
       - window_title: { equals: "Gmail — Ablaze Floorp" }
 
-  # - commands: ["move --workspace 12"]
-  #   match:
-  #     - window_title: { equals: "Gmail - Google Apps for UCLA Mail" }
-  #     - window_title:
-  #         {
-  #           equals: "Inbox - ncrespo@g.ucla.edu - Google Apps for UCLA Mail — Ablaze Floorp",
-  #         }
-  #     - window_title:
-  #         {
-  #           regex: "(Gmail - Inbox( \\(\\d+\\))? - ncrespo@g.ucla.edu - Google Apps for UCLA Mail)",
-  #         }
-
   - commands: ["move --workspace 98"]
     match:
       - window_process: { regex: "Spotify" }
@@ -253,8 +240,27 @@ window_rules:
       - window_process: { equals: "PhoneExperienceHost" }
       - window_process: { equals: "Dorion" }
 
+  # - commands: ["move --workspace 12"]
+  #   match:
+  #     - window_title: { equals: "Gmail - Google Apps for UCLA Mail" }
+  #     - window_title:
+  #         {
+  #           equals: "Inbox - ncrespo@g.ucla.edu - Google Apps for UCLA Mail — Ablaze Floorp",
+  #         }
+  #     - window_title:
+  #         {
+  #           regex: "(Gmail - Inbox( \\(\\d+\\))? - ncrespo@g.ucla.edu - Google Apps for UCLA Mail)",
+  #         }
+
 binding_modes:
-  # When enabled, the focused window can be resized via arrow keys or HJKL.
+  # When enabled, all keybindings are disabled except for alt+shift+p which
+  # returns to default keybindings.
+  - name: "pause"
+    keybindings:
+      - commands: ["wm-disable-binding-mode --name pause"]
+        bindings: ["alt+shift+p"]
+
+  # resize binding mode (focused window can be resized via arrow keys or HJKL.)
   # - name: 'resize'
   #   keybindings:
   #     - commands: ['resize --width -2%']
@@ -268,13 +274,6 @@ binding_modes:
   #     # Press enter/escape to return to default keybindings.
   #     - commands: ['wm-disable-binding-mode --name resize']
   #       bindings: ['escape', 'enter']
-
-  # When enabled, all keybindings are disabled except for alt+shift+p which
-  # returns to default keybindings.
-  - name: "pause"
-    keybindings:
-      - commands: ["wm-disable-binding-mode --name pause"]
-        bindings: ["alt+shift+p"]
 
 keybindings:
   # Shift focus in a given direction.
@@ -306,16 +305,6 @@ keybindings:
     bindings: ["alt+shift+oem_minus"]
   - commands: ["resize --height +3%"]
     bindings: ["alt+shift+oem_plus"]
-
-  # As an alternative to the resize keybindings above, resize mode enables
-  # resizing via arrow keys or HJKL. The binding mode is defined above with
-  # the name 'resize'.
-  # - commands: ["wm-enable-binding-mode --name resize"]
-  #   bindings: ["alt+r"]
-
-  # Disables all keybindings until alt+shift+p is pressed again.
-  - commands: ["wm-enable-binding-mode --name pause"]
-    bindings: ["alt+shift+p"]
 
   # Change tiling direction. This determines where new tiling windows will
   # be inserted.
@@ -360,36 +349,6 @@ keybindings:
   - commands: ["wm-redraw"]
     bindings: ["alt+r"]
 
-  # Launch CMD terminal. Alternatively, use `shell-exec wt` or
-  # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
-  # Terminal and Git Bash respectively.
-
-  # THESE ARE ALSO MANAGED BY AUTOHOTKEY
-
-  - commands: ['shell-exec wt --profile "WSL (default)"']
-    bindings: ["alt+shift+enter"]
-
-  - commands: ['shell-exec wt --profile "PowerShell"']
-    bindings: ["alt+enter"]
-
-  # - commands: ['shell-exec zen -P "Main"']
-  #   bindings: ["alt+b"]
-  - commands: ["shell-exec chrome"]
-    bindings: ["alt+b"]
-
-  # - commands:
-  #     - "shell-exec wt --focus yazi ~/Downloads/"
-  #   bindings: ["lwin+e"]
-
-  - commands:
-      - "shell-exec wt --focus yazi ~/Downloads/"
-    bindings: ["alt+y"]
-
-  - commands:
-      # - "focus --workspace 9"
-      - "shell-exec wt --focus btop"
-    bindings: ["alt+\\"]
-
   # Focus the next/previous workspace defined in `workspaces` config.
   - commands: ["focus --next-active-workspace"]
     bindings: ["alt+d"]
@@ -433,17 +392,6 @@ keybindings:
   - commands: ["focus --workspace 99"]
     bindings: ["alt+e"]
 
-  # Move the focused window's parent workspace to a monitor in a given
-  # direction.
-  # - commands: ["move-workspace --direction left"]
-  #   bindings: ["alt+shift+a"]
-  # - commands: ["move-workspace --direction right"]
-  #   bindings: ["alt+shift+f"]
-  # - commands: ["move-workspace --direction up"]
-  #   bindings: ["alt+shift+d"]
-  # - commands: ["move-workspace --direction down"]
-  #   bindings: ["alt+shift+s"]
-
   # Move focused window to a workspace defined in `workspaces` config.
   - commands: ["move --workspace 0"]
     bindings: ["alt+shift+escape"]
@@ -476,3 +424,33 @@ keybindings:
     bindings: ["Lwin+Right"]
   - commands: ["focus --prev-active-workspace"]
     bindings: ["Lwin+Left"]
+
+  # Disables all keybindings until alt+shift+p is pressed again.
+  - commands: ["wm-enable-binding-mode --name pause"]
+    bindings: ["alt+shift+p"]
+
+  # As an alternative to the resize keybindings above, resize mode enables
+  # resizing via arrow keys or HJKL. The binding mode is defined above with
+  # the name 'resize'.
+  # - commands: ["wm-enable-binding-mode --name resize"]
+  #   bindings: ["alt+r"]
+
+  # Move the focused window's parent workspace to a monitor in a given direction.
+  # - commands: ["move-workspace --direction left"]
+  #   bindings: ["alt+shift+a"]
+  # - commands: ["move-workspace --direction right"]
+  #   bindings: ["alt+shift+f"]
+  # - commands: ["move-workspace --direction up"]
+  #   bindings: ["alt+shift+d"]
+  # - commands: ["move-workspace --direction down"]
+  #   bindings: ["alt+shift+s"]
+
+  # opening programs is managed by autohotkey
+  # - commands: ['shell-exec wt --profile "WSL (default)"']
+  #   bindings: ["alt+shift+enter"]
+  # - commands: ['shell-exec wt --profile "PowerShell"']
+  #   bindings: ["alt+enter"]
+  # - commands:
+  #  - "focus --workspace 9"
+  #  - "shell-exec wt --focus btop"
+  #   bindings: ["alt+\\"]
