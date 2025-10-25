@@ -346,6 +346,12 @@ keybindings:
   - commands: ["wm-reload-config"]
     bindings: ["alt+shift+r"]
 
+  - commands: ["set-transparency --opacity 0.5"]
+    bindings: ["alt+o"]
+
+  - commands: ["set-transparency --opacity 1"]
+    bindings: ["alt+shift+o"]
+
   # Redraw all windows.
   - commands: ["wm-redraw"]
     bindings: ["alt+r"]
