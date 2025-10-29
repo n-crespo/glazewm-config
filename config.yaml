@@ -314,8 +314,7 @@ keybindings:
   - commands: ["toggle-tiling-direction"]
     bindings: ["alt+v"]
 
-  # Change focus from TO any floating windows
-  - commands: ["wm-cycle-focus --omit-minimized --omit-tiling"]
+  - commands: ["wm-cycle-focus"]
     bindings: ["alt+f"]
 
   # Change the focused window to be floating.
