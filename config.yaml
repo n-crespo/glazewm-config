@@ -238,6 +238,7 @@ window_rules:
     match:
       - window_process: { equals: "Beeper" }
       - window_process: { equals: "Discord" }
+      - window_process: { regex: "WhatsApp" }
       - window_process: { equals: "PhoneExperienceHost" }
       - window_process: { equals: "Dorion" }
 
