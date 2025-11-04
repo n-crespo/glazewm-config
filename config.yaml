@@ -211,23 +211,23 @@ window_rules:
 
   - commands: ["set-tiling"]
     match:
-      - window_process: { equals: "TickTick" }
+      # - window_process: { equals: "TickTick" }
       - window_process: { equals: "SumatraPDF" }
 
   - commands: ["move --workspace 99"]
     match:
       - window_process: { equals: "TickTick" }
 
-  - commands: ["move --workspace 97"]
-    match:
-      - window_title: { equals: "Gmail" }
-      - window_title:
-          {
-            regex: "(Gmail - Inbox( \\(\\d+\\))? - nicolasecrespo@gmail.com - Gmail)",
-          }
-      - window_title:
-          { equals: "Inbox - nicolasecrespo@gmail.com - Gmail — Ablaze Floorp" }
-      - window_title: { equals: "Gmail — Ablaze Floorp" }
+  # - commands: ["move --workspace 97"]
+  #   match:
+  #     - window_title: { equals: "Gmail" }
+  #     - window_title:
+  #         {
+  #           regex: "(Gmail - Inbox( \\(\\d+\\))? - nicolasecrespo@gmail.com - Gmail)",
+  #         }
+  #     - window_title:
+  #         { equals: "Inbox - nicolasecrespo@gmail.com - Gmail — Ablaze Floorp" }
+  #     - window_title: { equals: "Gmail — Ablaze Floorp" }
 
   - commands: ["move --workspace 98"]
     match:
