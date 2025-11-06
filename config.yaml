@@ -213,6 +213,7 @@ window_rules:
     match:
       # - window_process: { equals: "TickTick" }
       - window_process: { equals: "SumatraPDF" }
+      - window_process: { regex: "ApplicationFrameHost" } # whatsapp?
 
   - commands: ["move --workspace 99"]
     match:
