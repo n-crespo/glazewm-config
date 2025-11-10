@@ -215,10 +215,6 @@ window_rules:
       - window_process: { equals: "SumatraPDF" }
       - window_process: { regex: "ApplicationFrameHost" } # whatsapp?
 
-  - commands: ["move --workspace 99"]
-    match:
-      - window_process: { equals: "TickTick" }
-
   # - commands: ["move --workspace 97"]
   #   match:
   #     - window_title: { equals: "Gmail" }
@@ -239,9 +235,13 @@ window_rules:
     match:
       - window_process: { equals: "Beeper" }
       - window_process: { equals: "Discord" }
-      - window_process: { regex: "WhatsApp" }
+      - window_title: { equals: "WhatsApp Web" }
       - window_process: { equals: "PhoneExperienceHost" }
       - window_process: { equals: "Dorion" }
+
+  - commands: ["move --workspace 99"]
+    match:
+      - window_process: { equals: "TickTick" }
 
   # - commands: ["move --workspace 12"]
   #   match:
