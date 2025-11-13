@@ -178,7 +178,6 @@ window_rules:
       - window_process: { equals: "QuickLook" }
       - window_class: { equals: "MozillaDialogClass" }
       - window_title: { regex: "Window Spy for AHKv2" }
-      - window_class: { equals: "SumatraWgDefaultWinClass" }
       - window_process: { regex: "ScreenClippingHost|Wintoys" }
       - window_class: { equals: "XamlExplorerHostIslandWindow" }
       - window_process: { regex: "ScreenColorPicker|LockApp|Flow.Launcher" }
@@ -214,7 +213,6 @@ window_rules:
   - commands: ["set-tiling"]
     match:
       # - window_process: { equals: "TickTick" }
-      - window_process: { equals: "SumatraPDF" }
       - window_process: { regex: "ApplicationFrameHost" } # whatsapp?
 
   # - commands: ["move --workspace 97"]
