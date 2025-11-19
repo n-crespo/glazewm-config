@@ -213,7 +213,7 @@ window_rules:
   - commands: ["set-tiling"]
     match:
       # - window_process: { equals: "TickTick" }
-      - window_process: { regex: "ApplicationFrameHost" } # whatsapp?
+      # - window_process: { regex: "ApplicationFrameHost" } # whatsapp native app, but also some windows things
 
   # - commands: ["move --workspace 97"]
   #   match:
