@@ -171,7 +171,6 @@ window_rules:
 
       # Ignores any yasb windows.
       - window_process: { equals: "yasb" }
-      - window_process: { equals: "Blip" }
       - window_process: { equals: "Ditto" }
       - window_process: { equals: "GHelper" }
       - window_title: { regex: "Focus Timer" }
@@ -186,6 +185,7 @@ window_rules:
 
   - commands: ["set-floating"]
     match:
+      - window_process: { equals: "Blip" }
       - window_title:
           {
             regex: "Go to|This PC|Picture in picture|Sync to Most Recent Page Read",
