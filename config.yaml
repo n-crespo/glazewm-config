@@ -207,13 +207,17 @@ window_rules:
             regex: "Photos|Steam|open|Beeper|procexp|PhoneExperienceHost|Bitwarden",
           }
       - window_process: { regex: "BCUninstaller" }
+      - window_process: { equals: "voidImageViewer" }
+      - window_title: { equals: "yazi" }
+      - window_title: { regex: "btop" }
+      - window_process: { equals: "mpv" }
       # - window_title: { regex: "^Yazi: .+" }
       # - window_title: { regex: "btop4win++" }
 
-  - commands: ["set-tiling"]
-    match:
-      # - window_process: { equals: "TickTick" }
-      # - window_process: { regex: "ApplicationFrameHost" } # whatsapp native app, but also some windows things
+  # - commands: ["set-tiling"]
+  # match:
+  # - window_process: { equals: "TickTick" }
+  # - window_process: { regex: "ApplicationFrameHost" } # whatsapp native app, but also some windows things
 
   # - commands: ["move --workspace 97"]
   #   match:
@@ -228,7 +232,7 @@ window_rules:
 
   - commands: ["move --workspace 98"]
     match:
-      - window_process: { regex: "Spotify" }
+      # - window_process: { regex: "Spotify" }
       - window_title: { regex: "spotify_player.exe" }
 
   - commands: ["move --workspace 10"]
