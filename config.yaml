@@ -209,7 +209,7 @@ window_rules:
       - window_process: { regex: "BCUninstaller" }
       - window_process: { equals: "voidImageViewer" }
       - window_title: { equals: "yazi" }
-      - window_title: { regex: "btop" }
+      - window_title: { regex: "^btop" }
       - window_process: { equals: "mpv" }
       # - window_title: { regex: "^Yazi: .+" }
       # - window_title: { regex: "btop4win++" }
