@@ -187,13 +187,14 @@ window_rules:
     match:
       - window_process: { equals: "Blip" }
       - window_process: { equals: "mmc" } # windows device manager
+      - window_process: { equals: "msrdc" } # weird thing that appears when WSL starts
       - window_title:
           {
             regex: "Go to|This PC|Picture in picture|Sync to Most Recent Page Read",
           }
       - window_class:
           { regex: "ApplicationFrameWindow|HwndWrapper*|#32770|SunAwtDialog" }
-      - window_process: { regex: "explorer|Notepad|msrdc|sublime_text" }
+      - window_process: { regex: "explorer|Notepad|sublime_text" }
       - window_process:
           {
             regex: "ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|OpenConsole|Taskmgr",
