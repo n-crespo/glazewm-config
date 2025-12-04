@@ -187,6 +187,7 @@ window_rules:
     match:
       - window_title: { regex: "Bitwarden" }
       - window_process: { equals: "Blip" }
+      - window_process: { equals: "FPilot" }
       - window_process: { equals: "mmc" } # windows device manager
       - window_process: { equals: "msrdc" } # weird thing that appears when WSL starts
       - window_title:
