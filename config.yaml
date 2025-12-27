@@ -236,7 +236,7 @@ window_rules:
 
   - commands: ["move --workspace 98"]
     match:
-      # - window_process: { regex: "Spotify" }
+      - window_process: { regex: "Spotify" }
       - window_title: { regex: "spotify_player.exe" }
 
   - commands: ["move --workspace 10"]
