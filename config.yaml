@@ -70,7 +70,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: "#404040"
+      color: "#303030"
 
     hide_title_bar:
       enabled: false
