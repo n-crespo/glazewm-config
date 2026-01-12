@@ -91,6 +91,9 @@ window_effects:
       enabled: true
       color: "#000000"
 
+    hide_title_bar:
+      enabled: false
+
 window_behavior:
   # New windows are created in this state whenever possible.
   # Allowed values: 'tiling', 'floating'.
@@ -162,6 +165,10 @@ workspaces:
     keep_alive: true
 
 window_rules:
+  # - commands: ["set-title-bar-visibility hidden"]
+  #   match:
+  #     - window_process: { regex: "alacritty" }
+
   - commands: ["ignore"]
     match:
       - window_process: { equals: "msrdc" }
@@ -202,7 +209,7 @@ window_rules:
             regex: "ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|OpenConsole|Taskmgr",
           }
 
-  - commands: ["set-floating --centered"]
+  - commands: ["set-floating"]
     match:
       - window_title: { equals: "WhatsApp Web" }
       # - window_title: { regex: "spotify_player.exe" }
@@ -213,6 +220,7 @@ window_rules:
       - window_process: { regex: "BCUninstaller" }
       - window_process: { equals: "voidImageViewer" }
       - window_title: { equals: "yazi" }
+      - window_title: { regex: "^Yazi: " }
       - window_title: { regex: "^btop" }
       - window_process: { equals: "mpv" }
       # - window_title: { regex: "^Yazi: .+" }
@@ -328,7 +336,7 @@ keybindings:
     bindings: ["alt+f"]
 
   # Change the focused window to be floating.
-  - commands: ["toggle-floating --centered"]
+  - commands: ["set-floating --width 2000 --height 1500 --centered"]
     bindings: ["alt+shift+f"]
 
   # Change the focused window to be tiling.
