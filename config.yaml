@@ -189,7 +189,7 @@ window_rules:
 
   - commands: ["set-floating"]
     match:
-      - window_title: { regex: "Bitwarden" }
+      - window_title: { equals: "_crx_nngceckbapebfimnlniiiahkandclblb" } # chrome extension code for Bitwarden
       - window_process: { equals: "Blip" }
       - window_process: { equals: "FPilot" }
       - window_process: { equals: "mmc" } # windows device manager
