@@ -189,6 +189,7 @@ window_rules:
 
   - commands: ["set-floating"]
     match:
+      - window_title: { regex: "nvim.exe$" } # chrome extension code for Bitwarden
       - window_title: { equals: "_crx_nngceckbapebfimnlniiiahkandclblb" } # chrome extension code for Bitwarden
       - window_process: { equals: "Blip" }
       - window_process: { equals: "FPilot" }
@@ -333,6 +334,7 @@ keybindings:
   # Change the focused window to be floating.
   - commands: ["set-floating --width 2000 --height 1500 --centered"]
     bindings: ["alt+shift+f"]
+  # - commands: ["toggle-floating --centered"]
 
   # Change the focused window to be tiling.
   - commands: ["toggle-tiling"]
