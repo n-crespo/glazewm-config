@@ -210,9 +210,7 @@ window_rules:
       - window_class:
           { regex: "ApplicationFrameWindow|HwndWrapper*|#32770|SunAwtDialog" }
       - window_title:
-          {
-            regex: "Go to|This PC|Picture in picture|Sync to Most Recent Page Read",
-          }
+          { regex: "Go to|Picture in picture|Sync to Most Recent Page Read" }
       - window_process:
           {
             regex: "ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|OpenConsole|Taskmgr",
