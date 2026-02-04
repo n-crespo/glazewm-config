@@ -187,11 +187,14 @@ window_rules:
       - window_class:
           { equals: "Windows.UI.Composition.DesktopWindowContentBridge1" }
 
+  - commands: ["set-floating --shown-on-top=true"]
+    match:
+      - window_process: { equals: "Blip" }
+
   - commands: ["set-floating"]
     match:
       - window_title: { regex: "nvim.exe$" } # chrome extension code for Bitwarden
       - window_title: { equals: "_crx_nngceckbapebfimnlniiiahkandclblb" } # chrome extension code for Bitwarden
-      - window_process: { equals: "Blip" }
       - window_process: { equals: "FPilot" }
       - window_process: { equals: "mmc" } # windows device manager
       - window_process: { equals: "msrdc" } # weird thing that appears when WSL starts
