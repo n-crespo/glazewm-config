@@ -51,14 +51,14 @@ gaps:
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: "20px"
+    top: "0px"
     right: "0px"
     bottom: "0px"
     left: "0px"
 
   # Overrides `outer_gap` when there is just one window on a workspace.
   single_window_outer_gap:
-    top: "20px"
+    top: "0%"
     right: "0%"
     bottom: "0%"
     left: "0%"
