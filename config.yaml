@@ -224,10 +224,10 @@ window_rules:
             regex: "Photos|Steam|open|Beeper|procexp|PhoneExperienceHost|Bitwarden",
           }
 
-  # - commands: ["set-tiling"]
-  # match:
-  # - window_process: { equals: "TickTick" }
-  # - window_process: { regex: "ApplicationFrameHost" } # whatsapp native app, but also some windows things
+  - commands: ["set-tiling"]
+    match:
+      - window_process: { equals: "sioyek" }
+      # - window_process: { regex: "ApplicationFrameHost" } # whatsapp native app, but also some windows things
 
   # - commands: ["move --workspace 97"]
   #   match:
