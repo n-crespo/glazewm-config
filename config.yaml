@@ -197,6 +197,7 @@ window_rules:
       - window_title: { regex: "nvim.exe$" } # chrome extension code for Bitwarden
       - window_title: { equals: "_crx_nngceckbapebfimnlniiiahkandclblb" } # chrome extension code for Bitwarden
       - window_process: { equals: "FPilot" }
+      - window_process: { equals: "transmission-qt" }
       - window_process: { equals: "mmc" } # windows device manager
       - window_process: { equals: "msrdc" } # weird thing that appears when WSL starts
       - window_process: { regex: "BCUninstaller" }
