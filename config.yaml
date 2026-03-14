@@ -326,8 +326,8 @@ keybindings:
 
   # Change tiling direction. This determines where new tiling windows will
   # be inserted.
-  - commands: ["toggle-tiling-direction"]
-    bindings: ["alt+shift+d"]
+  # - commands: ["toggle-tiling-direction"]
+  #   bindings: ["alt+shift+d"]
   - commands: ["toggle-tiling-direction"]
     bindings: ["alt+v"]
 
