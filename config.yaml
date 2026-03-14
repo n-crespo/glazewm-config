@@ -203,7 +203,6 @@ window_rules:
       - window_process: { regex: "BCUninstaller" }
       - window_process: { equals: "voidImageViewer" }
       - window_title: { equals: "yazi" }
-      - window_title: { regex: "^Yazi: " }
       - window_title: { regex: "^btop" }
       - window_process: { equals: "mpv" }
       - window_process: { regex: "explorer|Notepad|sublime_text" }
@@ -257,6 +256,7 @@ window_rules:
   - commands: ["move --workspace 99"]
     match:
       - window_process: { equals: "TickTick" }
+      - window_title: { regex: "^TickTick - " }
 
   # - commands: ["move --workspace 12"]
   #   match:
