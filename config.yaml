@@ -277,6 +277,7 @@ window_rules:
     match:
       - window_process: { equals: "TickTick" }
       - window_title: { regex: "^TickTick - " }
+      - window_title: { equals: "TickTick" }
 
   # - commands: ["move --workspace 12"]
   #   match:
