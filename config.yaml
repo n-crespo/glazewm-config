@@ -191,8 +191,9 @@ window_rules:
       - window_process: { equals: "Blip" }
       - window_process: { equals: "Ditto" }
 
-  - commands: ["set-floating"]
+  - commands: ["set-floating --centered"]
     match:
+      # - window_title: { regex: "^Discord -" }
       - window_title: { equals: "Windows Terminal" } # float windows terminal by default (opening normally tiles)
       - window_title: { regex: "nvim.exe$" } # chrome extension code for Bitwarden
       - window_title: { equals: "_crx_nngceckbapebfimnlniiiahkandclblb" } # chrome extension code for Bitwarden
@@ -245,10 +246,31 @@ window_rules:
       - window_process: { regex: "Spotify" }
       - window_title: { regex: "spotify_player.exe" }
 
+        # on can be used to specify on which event(s) the rule should be triggered. If
+        # multiple events are specified, then the rule will be triggered on any
+        # of them.
+
+        # on: ["manage", "title_change"] # DEFAULT
+        #
+        # focus: When a window receives focus
+        # manage: When a window is initially managed by Glaze, usually just
+        #         after it is created
+        # title_change: When a window's title changes
+
+
+        # run_once: true # DEFAULT
+        # Whether the rule should only be run once per window. If true, the rule will
+        # only be run the first time the window matches the criteria. This
+        # defaults to true.
+
+
   - commands: ["move --workspace 10"]
+    run_once: true # default is true.
     match:
       - window_process: { equals: "Beeper" }
       - window_process: { equals: "Discord" }
+      - window_title: { regex: "^Discord -" }
+      - window_title: { equals: "Discord" }
       - window_title: { equals: "WhatsApp Web" }
       - window_process: { equals: "PhoneExperienceHost" }
       - window_process: { equals: "Dorion" }
