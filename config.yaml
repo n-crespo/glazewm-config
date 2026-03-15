@@ -194,6 +194,7 @@ window_rules:
   - commands: ["set-floating"]
     match:
       # - window_title: { regex: "^Discord -" }
+      - window_title: { equals: "Task Manager - Helium" }
       - window_title: { equals: "Windows Terminal" } # float windows terminal by default (opening normally tiles)
       - window_title: { regex: "nvim.exe$" } # chrome extension code for Bitwarden
       - window_title: { equals: "_crx_nngceckbapebfimnlniiiahkandclblb" } # chrome extension code for Bitwarden
