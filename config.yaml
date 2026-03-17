@@ -121,23 +121,23 @@ window_behavior:
 
 workspaces:
   - name: "0"
-    display_name: " " # terminal
+    display_name: "" # terminal
     keep_alive: true
 
   - name: "1"
-    display_name: " 1"
+    display_name: "1"
     keep_alive: true
   - name: "2"
-    display_name: " 2"
+    display_name: "2"
     keep_alive: true
   - name: "3"
-    display_name: " 3"
+    display_name: "3"
     keep_alive: true
   - name: "4"
-    display_name: " 4"
+    display_name: "4"
     keep_alive: true
   - name: "5"
-    display_name: " 5"
+    display_name: "5"
     keep_alive: true
   # - name: "6"
   #   display_name: "6"
@@ -152,16 +152,16 @@ workspaces:
   #   display_name: "9"
   #   keep_alive: false
 
-  - name: "10" # for beeper + phone link (messages)
-    display_name: "​"
+  - name: "10" # for discord/whatsapp
+    display_name: "m" # messages
     keep_alive: false
 
   - name: "98"
-    display_name: "​" # spotify
+    display_name: "s" # spotify
     keep_alive: false
 
   - name: "99"
-    display_name: "​" # ticktick
+    display_name: "e" # ticktick
     keep_alive: false
 
 window_rules:
@@ -392,7 +392,7 @@ keybindings:
 
   # Redraw all windows.
   - commands: ["wm-redraw"]
-    bindings: ["alt+r"]
+    bindings: ["ctrl+alt+r"]
 
   # Focus the next/previous workspace defined in `workspaces` config.
   - commands: ["focus --next-active-workspace"]
