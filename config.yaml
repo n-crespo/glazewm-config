@@ -78,9 +78,9 @@ window_effects:
     # Change the corner style of the window's frame.
     # ** Exclusive to Windows 11 due to API limitations.
     corner_style:
-      enabled: false
+      enabled: true
       # Allowed values: 'square', 'rounded', 'small_rounded'.
-      style: "rounded"
+      style: "small_rounded"
 
   # Visual effects to apply to non-focused windows.
   other_windows:
