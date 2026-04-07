@@ -172,6 +172,7 @@ window_rules:
   - commands: ["ignore"]
     match:
       - window_process: { equals: "msrdc" }
+      - window_class: { regex: "SumatraWgDefaultWinClass" }
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" } # Ignores picture-in-picture windows for browsers.
         window_class: { regex: "Chrome_WidgetWin_1" }
       - window_process: { equals: "yasb" }
