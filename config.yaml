@@ -191,9 +191,6 @@ window_rules:
     match:
       - window_process: { equals: "Blip" }
       - window_process: { equals: "Ditto" }
-
-  - commands: ["set-floating"]
-    match:
       - window_title: { equals: "_crx_nngceckbapebfimnlniiiahkandclblb" } # chrome extension code for Bitwarden
 
   - commands: ["set-floating --width 1000 --height 1200 --centered"]
