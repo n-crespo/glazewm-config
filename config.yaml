@@ -31,7 +31,7 @@ general:
   # effect if `hide_method: 'hide'`.
   # - 'true': Show all windows (regardless of workspace).
   # - 'false': Only show windows from the currently shown workspaces.
-  show_all_in_taskbar: true # setting this to false became buggy after mcaos port
+  show_all_in_taskbar: true # setting this to false doesn't work properly after MacOS port
 
   cursor_jump:
     # Whether to automatically move the cursor on the specified trigger.
@@ -165,9 +165,9 @@ workspaces:
     keep_alive: false
 
 window_rules:
-  # - commands: ["set-title-bar-visibility hidden"]
-  #   match:
-  #     - window_process: { regex: "alacritty" }
+  - commands: ["set-title-bar-visibility hidden"]
+    match:
+      - window_process: { regex: "alacritty" }
 
   - commands: ["ignore"]
     match:
