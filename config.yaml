@@ -196,6 +196,14 @@ window_rules:
     match:
       - window_title: { equals: "_crx_nngceckbapebfimnlniiiahkandclblb" } # chrome extension code for Bitwarden
 
+  - commands: ["set-floating --width 1000 --height 1200 --centered"]
+    match:
+      - window_title: { regex: "^btop" }
+
+  - commands: ["set-floating --width 1500 --height 1200 --centered"]
+    match:
+      - window_title: { equals: "yazi" }
+
   - commands: ["set-floating --centered"]
     match:
       # - window_title: { regex: "^Discord -" }
@@ -207,8 +215,6 @@ window_rules:
       - window_process: { equals: "msrdc" } # weird thing that appears when WSL starts
       - window_process: { regex: "BCUninstaller" }
       - window_process: { equals: "voidImageViewer" }
-      - window_title: { equals: "yazi" }
-      - window_title: { regex: "^btop" }
       - window_process: { equals: "mpv" }
       - window_process: { regex: "explorer|Notepad|sublime_text" }
       - window_title: { equals: "WhatsApp Web" }
