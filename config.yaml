@@ -197,20 +197,22 @@ window_rules:
       - window_title: { equals: "_crx_nngceckbapebfimnlniiiahkandclblb" } # chrome extension code for Bitwarden
 
   - commands: ["set-floating --width 1000 --height 1200 --centered"]
+    on: [manage]
     match:
       - window_title: { regex: "^btop" }
 
   - commands: ["set-floating --width 1500 --height 1200 --centered"]
+    on: [manage]
     match:
       - window_title: { equals: "yazi" }
 
-  - commands: ["set-floating --centered"]
+  - commands: [set-floating --centered]
+    on: [manage]
     match:
       # - window_title: { regex: "^Discord -" }
       - window_title: { equals: "Task Manager - Helium" }
       - window_title: { equals: "Windows Terminal" } # float windows terminal by default (opening normally tiles)
       - window_title: { regex: "nvim.exe$" }
-      - window_process: { equals: "transmission-qt" }
       - window_process: { equals: "mmc" } # windows device manager
       - window_process: { equals: "msrdc" } # weird thing that appears when WSL starts
       - window_process: { regex: "BCUninstaller" }
@@ -281,7 +283,6 @@ window_rules:
       - window_title: { equals: "Discord" }
       - window_title: { equals: "WhatsApp Web" }
       - window_process: { equals: "PhoneExperienceHost" }
-      - window_process: { equals: "Dorion" }
 
   - commands: ["move --workspace 99"]
     match:
