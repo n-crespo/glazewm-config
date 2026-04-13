@@ -193,21 +193,16 @@ window_rules:
       - window_process: { equals: "Ditto" }
       - window_title: { equals: "_crx_nngceckbapebfimnlniiiahkandclblb" } # chrome extension code for Bitwarden
 
-  - commands: ["set-floating --width 1000 --height 1200 --centered"]
-    on: [manage]
-    match:
-      - window_title: { regex: "^btop" }
-
   - commands: ["set-floating --width 1500 --height 1200 --centered"]
     on: [manage]
     match:
       - window_title: { equals: "yazi" }
+      - window_title: { regex: "^btop" }
+      - window_title: { equals: "Task Manager - Helium" }
 
   - commands: [set-floating --centered]
     on: [manage]
     match:
-      # - window_title: { regex: "^Discord -" }
-      - window_title: { equals: "Task Manager - Helium" }
       - window_title: { equals: "Windows Terminal" } # float windows terminal by default (opening normally tiles)
       - window_title: { regex: "nvim.exe$" }
       - window_process: { equals: "mmc" } # windows device manager
@@ -233,22 +228,6 @@ window_rules:
           {
             regex: "Photos|Steam|open|Beeper|procexp|PhoneExperienceHost|Bitwarden",
           }
-
-  # - commands: ["set-tiling"]
-  #   match:
-  #     - window_process: { equals: "sioyek" }
-  # - window_process: { regex: "ApplicationFrameHost" } # whatsapp native app, but also some windows things
-
-  # - commands: ["move --workspace 97"]
-  #   match:
-  #     - window_title: { equals: "Gmail" }
-  #     - window_title:
-  #         {
-  #           regex: "(Gmail - Inbox( \\(\\d+\\))? - nicolasecrespo@gmail.com - Gmail)",
-  #         }
-  #     - window_title:
-  #         { equals: "Inbox - nicolasecrespo@gmail.com - Gmail — Ablaze Floorp" }
-  #     - window_title: { equals: "Gmail — Ablaze Floorp" }
 
   - commands: ["move --workspace 98"]
     match:
@@ -286,18 +265,6 @@ window_rules:
       - window_process: { equals: "TickTick" }
       - window_title: { regex: "^TickTick - " }
       - window_title: { equals: "TickTick" }
-
-  # - commands: ["move --workspace 12"]
-  #   match:
-  #     - window_title: { equals: "Gmail - Google Apps for UCLA Mail" }
-  #     - window_title:
-  #         {
-  #           equals: "Inbox - ncrespo@g.ucla.edu - Google Apps for UCLA Mail — Ablaze Floorp",
-  #         }
-  #     - window_title:
-  #         {
-  #           regex: "(Gmail - Inbox( \\(\\d+\\))? - ncrespo@g.ucla.edu - Google Apps for UCLA Mail)",
-  #         }
 
 binding_modes:
   # When enabled, all keybindings are disabled except for alt+shift+p which
@@ -353,10 +320,7 @@ keybindings:
   - commands: ["resize --height +3%"]
     bindings: ["alt+shift+oem_plus"]
 
-  # Change tiling direction. This determines where new tiling windows will
-  # be inserted.
-  # - commands: ["toggle-tiling-direction"]
-  #   bindings: ["alt+shift+d"]
+  # Change tiling direction. This determines where new tiling windows will be inserted.
   - commands: ["toggle-tiling-direction"]
     bindings: ["alt+v"]
 
@@ -429,14 +393,6 @@ keybindings:
     bindings: ["alt+4"]
   - commands: ["focus --workspace 5"]
     bindings: ["alt+5"]
-  # - commands: ["focus --workspace 6"]
-  #   bindings: ["alt+6"]
-  # - commands: ["focus --workspace 7"]
-  #   bindings: ["alt+7"]
-  # - commands: ["focus --workspace 8"]
-  #   bindings: ["alt+8"]
-  # - commands: ["focus --workspace 9"]
-  #   bindings: ["alt+9"]
   - commands: ["focus --workspace 10"]
     bindings: ["alt+m"]
   - commands: ["focus --workspace 98"]
@@ -457,14 +413,6 @@ keybindings:
     bindings: ["alt+shift+4"]
   - commands: ["move --workspace 5"]
     bindings: ["alt+shift+5"]
-  # - commands: ["move --workspace 6"]
-  #   bindings: ["alt+shift+6"]
-  # - commands: ["move --workspace 7"]
-  #   bindings: ["alt+shift+7"]
-  # - commands: ["move --workspace 8"]
-  #   bindings: ["alt+shift+8"]
-  # - commands: ["move --workspace 9"]
-  #   bindings: ["alt+shift+9"]
   - commands: ["move --workspace 10"]
     bindings: ["alt+shift+m"]
   - commands: ["move --workspace 98"]
