@@ -153,15 +153,15 @@ workspaces:
   #   keep_alive: false
 
   - name: "10" # for discord/whatsapp
-    display_name: "M" # messages
+    display_name: "m" # messages
     keep_alive: false
 
   - name: "98"
-    display_name: "S" # spotify
+    display_name: "s" # spotify
     keep_alive: false
 
   - name: "99"
-    display_name: "E" # ticktick
+    display_name: "e" # ticktick
     keep_alive: false
 
 window_rules:
