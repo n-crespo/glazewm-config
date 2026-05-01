@@ -197,6 +197,7 @@ window_rules:
     on: [manage]
     match:
       - window_title: { equals: "yazi" }
+      - window_title: { equals: "wt-floating" }
       - window_title: { regex: "^btop" }
       - window_title: { equals: "Task Manager - Helium" }
 
