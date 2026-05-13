@@ -171,6 +171,8 @@ window_rules:
 
   - commands: ["ignore"]
     match:
+      - window_name: { equals: "Clock" } # windows clock app
+        window_class: { equals: "ApplicationFrameWindow" }
       - window_process: { equals: "msrdc" }
       - window_class: { regex: "SumatraWgDefaultWinClass" }
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" } # Ignores picture-in-picture windows for browsers.
