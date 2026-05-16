@@ -338,6 +338,11 @@ keybindings:
   - commands: ["toggle-tiling"]
     bindings: ["alt+t"]
 
+  - commands: ["set-floating --shown-on-top=false"]
+    bindings: ["alt+shift+u"]
+  - commands: ["set-floating --shown-on-top=true"]
+    bindings: ["alt+shift+p"]
+
   # Change the focused window to be fullscreen.
   - commands: ["toggle-fullscreen"]
     bindings: ["alt+x"]
