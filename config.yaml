@@ -1,11 +1,14 @@
 general:
   # Commands to run when the WM has started (e.g. to run a script or launch
   # another application). Here we are running a batch script to start yasb.
-  startup_commands: ["shell-exec yasb"]
+  startup_commands: # ["shell-exec yasb", "shell-exec thide hide"]
+    - "shell-exec yasb"
+    - "shell-exec thide hide"
 
   # Commands to run just before the WM is shutdown.
   # Example: The below command kills yasb.
-  # shutdown_commands: ["shell-exec taskkill /IM yasb.exe /F"]
+  shutdown_commands:
+    - "shell-exec thide show"
 
   # Commands to run after the WM config is reloaded.
   # added keymap to reload yasb individually with autohotkey (alt+shift+y)
