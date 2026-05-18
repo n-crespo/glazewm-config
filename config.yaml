@@ -174,8 +174,9 @@ window_rules:
 
   - commands: ["ignore"]
     match:
-      - window_name: { equals: "Clock" } # windows clock app
+      - window_title: { equals: "Clock" } # windows clock app
         window_class: { equals: "ApplicationFrameWindow" }
+
       - window_process: { equals: "msrdc" }
       - window_class: { regex: "SumatraWgDefaultWinClass" }
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" } # Ignores picture-in-picture windows for browsers.
@@ -189,8 +190,7 @@ window_rules:
       - window_process: { regex: "ScreenClippingHost|Wintoys" }
       - window_class: { equals: "XamlExplorerHostIslandWindow" }
       - window_process: { regex: "ScreenColorPicker|LockApp|Flow.Launcher" }
-      - window_class:
-          { equals: "Windows.UI.Composition.DesktopWindowContentBridge1" }
+      - window_class: { equals: "Windows.UI.Composition.DesktopWindowContentBridge1" }
 
   - commands: ["set-floating --shown-on-top=true"]
     match:
@@ -209,6 +209,7 @@ window_rules:
   - commands: [set-floating --centered]
     on: [manage]
     match:
+      - window_class: { equals: "ApplicationFrameWindow" } # float windows terminal by default (opening normally tiles)
       - window_title: { equals: "Windows Terminal" } # float windows terminal by default (opening normally tiles)
       - window_title: { regex: "nvim.exe$" }
       - window_process: { equals: "mmc" } # windows device manager
@@ -222,18 +223,11 @@ window_rules:
       # - window_title: { regex: "spotify_player.exe" }
       # - window_title: { regex: "^Yazi: .+" }
       # - window_title: { regex: "btop4win++" }
-      - window_class:
-          { regex: "ApplicationFrameWindow|HwndWrapper*|#32770|SunAwtDialog" }
-      - window_title:
-          { regex: "Go to|Picture in picture|Sync to Most Recent Page Read" }
+      - window_class: { regex: "ApplicationFrameWindow|HwndWrapper*|#32770|SunAwtDialog" }
+      - window_title: { regex: "Go to|Picture in picture|Sync to Most Recent Page Read" }
       - window_process:
-          {
-            regex: "ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|OpenConsole|Taskmgr",
-          }
-      - window_process:
-          {
-            regex: "Photos|Steam|open|Beeper|procexp|PhoneExperienceHost|Bitwarden",
-          }
+          { regex: "ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|OpenConsole|Taskmgr" }
+      - window_process: { regex: "Photos|Steam|open|Beeper|procexp|PhoneExperienceHost|Bitwarden" }
 
   - commands: ["move --workspace 98"]
     match:
