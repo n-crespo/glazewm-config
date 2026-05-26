@@ -185,7 +185,6 @@ window_rules:
       - window_process: { equals: "GHelper" }
       - window_title: { regex: "Focus Timer" }
       - window_process: { equals: "QuickLook" }
-      - window_class: { equals: "MozillaDialogClass" }
       - window_title: { regex: "Window Spy for AHKv2" }
       - window_process: { regex: "ScreenClippingHost|Wintoys" }
       - window_class: { equals: "XamlExplorerHostIslandWindow" }
@@ -197,6 +196,7 @@ window_rules:
       - window_process: { equals: "Blip" }
       - window_process: { equals: "Ditto" }
       - window_title: { equals: "_crx_nngceckbapebfimnlniiiahkandclblb" } # chrome extension code for Bitwarden
+      - window_class: { equals: "MozillaDialogClass" } # bitwarden on firefox
 
   - commands: ["set-floating --width 1500 --height 1200 --centered"]
     on: [manage]
