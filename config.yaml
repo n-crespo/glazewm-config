@@ -205,6 +205,8 @@ window_rules:
       - window_title: { equals: "wt-floating" }
       - window_title: { regex: "^btop" }
       - window_title: { equals: "Task Manager - Helium" }
+      - window_class: { equals: "MozillaWindowClass" } # bookmarks manager
+        window_title: { equals: "Library" }
 
   - commands: [set-floating --centered]
     on: [manage]
@@ -265,6 +267,7 @@ window_rules:
       - window_process: { equals: "TickTick" }
       - window_title: { regex: "^TickTick - " }
       - window_title: { equals: "TickTick" }
+      - window_title: { regex: "— TickTick in Zen Browser$" }
 
 binding_modes:
   # When enabled, all keybindings are disabled except for alt+shift+p which
