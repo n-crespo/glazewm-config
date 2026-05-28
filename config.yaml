@@ -442,7 +442,6 @@ keybindings:
   # the name 'resize'.
   # - commands: ["wm-enable-binding-mode --name resize"]
   #   bindings: ["alt+r"]
-
   # Move the focused window's parent workspace to a monitor in a given direction.
   # - commands: ["move-workspace --direction left"]
   #   bindings: ["alt+shift+a"]
@@ -452,7 +451,6 @@ keybindings:
   #   bindings: ["alt+shift+d"]
   # - commands: ["move-workspace --direction down"]
   #   bindings: ["alt+shift+s"]
-
   # opening programs is managed by autohotkey
   # - commands: ['shell-exec wt --profile "WSL (default)"']
   #   bindings: ["alt+shift+enter"]
