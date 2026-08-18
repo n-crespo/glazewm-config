@@ -174,7 +174,7 @@ window_rules:
 
   - commands: ["ignore"]
     match:
-      - window_title: { equals: "LazyGitRemoteClose" } # lazygit ghost window 
+      - window_title: { equals: "LazyGitRemoteClose" } # lazygit ghost window
       - window_title: { equals: "Clock" } # windows clock app
         window_class: { equals: "ApplicationFrameWindow" }
 
@@ -222,6 +222,7 @@ window_rules:
       - window_process: { equals: "voidImageViewer" }
       - window_process: { equals: "mpv" }
       - window_process: { regex: "explorer|Notepad|sublime_text" }
+      - window_process: { regex: "FPilot" }
       - window_title: { equals: "WhatsApp Web" }
       - window_title: { equals: "Google Photos" }
       # - window_title: { regex: "spotify_player.exe" }
