@@ -369,8 +369,8 @@ keybindings:
   # - commands: ["set-transparency --opacity-delta -0.25"]
   #   bindings: ["alt+o"]
   # #
-  - commands: ["set-title-bar-visibility hidden"]
-    bindings: ["alt+shift+o"]
+  # - commands: ["set-title-bar-visibility hidden"]
+  #   bindings: ["alt+shift+o"]
 
   # Redraw all windows.
   - commands: ["wm-redraw"]
