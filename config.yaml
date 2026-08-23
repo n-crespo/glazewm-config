@@ -54,14 +54,14 @@ gaps:
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: "1px"
+    top: "20px"
     right: "0px"
     bottom: "0px"
     left: "0px"
 
   # Overrides `outer_gap` when there is just one window on a workspace.
   single_window_outer_gap:
-    top: "1px"
+    top: "20px"
     right: "0px"
     bottom: "0px"
     left: "0px"
@@ -117,10 +117,10 @@ window_behavior:
       border: false
       # Maximize the window if possible. If the window doesn't have a
       # maximize button, then it'll be fullscreen'ed normally instead.
-      maximized: false
+      maximized: true
 
       # Whether to show fullscreen windows as always on top.
-      shown_on_top: false
+      shown_on_top: true
 
 workspaces:
   - name: "0"
