@@ -185,6 +185,7 @@ window_rules:
         window_class: { regex: "Chrome_WidgetWin_1" }
       - window_process: { equals: "yasb" }
       - window_process: { equals: "GHelper" }
+      - window_process: { equals: "ghelper" }
       - window_title: { regex: "Focus Timer" }
       - window_process: { equals: "QuickLook" }
       - window_title: { regex: "Window Spy for AHKv2" }
