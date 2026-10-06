@@ -240,6 +240,7 @@ window_rules:
   - commands: ["move --workspace 98"]
     match:
       - window_process: { regex: "Spotify" }
+      - window_process: { regex: "spotifast" }
       - window_title: { regex: "spotify_player.exe" }
 
         # on can be used to specify on which event(s) the rule should be triggered. If
