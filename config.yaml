@@ -226,6 +226,7 @@ window_rules:
       - window_process: { equals: "mpv" }
       - window_process: { regex: "explorer|Notepad|sublime_text" }
       - window_process: { regex: "FPilot" }
+      - window_process: { regex: "zapfast" }
       - window_title: { equals: "WhatsApp Web" }
       - window_title: { equals: "Google Photos" }
       # - window_title: { regex: "spotify_player.exe" }
@@ -267,6 +268,7 @@ window_rules:
       - window_title: { regex: "^Discord -" }
       - window_title: { equals: "Discord" }
       - window_title: { equals: "WhatsApp Web" }
+      - window_process: { regex: "zapfast" }
       - window_process: { equals: "PhoneExperienceHost" }
 
   - commands: ["move --workspace 99"]
