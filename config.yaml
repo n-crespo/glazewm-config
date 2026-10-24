@@ -215,11 +215,15 @@ window_rules:
       - window_class: { equals: "MozillaWindowClass" } # bookmarks manager
         window_title: { equals: "Library" }
 
+  - commands: [set-floating]
+    on: [manage]
+    match:
+      - window_process: { equals: "python" }
+  #
   - commands: [set-floating --centered]
     on: [manage]
     match:
-      - window_class: { equals: "ApplicationFrameWindow" } # float windows terminal by default (opening normally tiles)
-      - window_title: { equals: "Windows Terminal" } # float windows terminal by default (opening normally tiles)
+      - window_class: { equals: "ApplicationFrameWindow" }
       - window_title: { regex: "nvim.exe$" }
       - window_process: { equals: "mmc" } # windows device manager
       - window_process: { equals: "msrdc" } # weird thing that appears when WSL starts
