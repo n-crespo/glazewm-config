@@ -207,7 +207,6 @@ window_rules:
   - commands: ["set-floating --width 1500 --height 1200 --centered"]
     on: [manage]
     match:
-      - window_title: { equals: "Immich" }
       - window_title: { equals: "yazi" }
       - window_title: { equals: "wt-floating" }
       - window_title: { regex: "^btop" }
@@ -219,7 +218,8 @@ window_rules:
     on: [manage]
     match:
       - window_process: { equals: "python" }
-  #
+      - window_title: { equals: "Immich" }
+
   - commands: [set-floating --centered]
     on: [manage]
     match:
