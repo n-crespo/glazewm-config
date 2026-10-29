@@ -189,6 +189,7 @@ window_rules:
       - window_title: { regex: "Focus Timer" }
       - window_process: { equals: "QuickLook" }
       - window_title: { regex: "Window Spy for AHKv2" }
+      - window_title: { regex: "Drag Target" }
       - window_process: { regex: "ScreenClippingHost|Wintoys" }
       - window_class: { equals: "XamlExplorerHostIslandWindow" }
       - window_process: { regex: "ScreenColorPicker|LockApp|Flow.Launcher" }
