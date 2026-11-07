@@ -180,6 +180,8 @@ window_rules:
 
       # - window_class: { equals: "MozillaDialogClass" } # bitwarden on firefox
       - window_process: { equals: "msrdc" }
+      - window_title: { equals: "Find" }
+        window_process: { equals: "SumatraPDF" }
       - window_class: { regex: "SumatraWgDefaultWinClass" }
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" } # Ignores picture-in-picture windows for browsers.
         window_class: { regex: "Chrome_WidgetWin_1" }
