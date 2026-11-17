@@ -353,6 +353,10 @@ keybindings:
   - commands: ["set-floating --width 2200 --height 1600 --centered"]
     bindings: ["alt+shift+f"]
 
+  # Center the focused floating window (keeps its current size).
+  - commands: ["position --centered"]
+    bindings: ["alt+shift+c"]
+
   # Change the focused window to be tiling.
   - commands: ["toggle-tiling"]
     bindings: ["alt+t"]
