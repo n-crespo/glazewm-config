@@ -91,8 +91,13 @@ window_effects:
       enabled: false
       opacity: 90%
     border:
-      enabled: false
+      enabled: true
       color: "#000000"
+
+    corner_style:
+      enabled: true
+      # Allowed values: 'square', 'rounded', 'small_rounded'.
+      style: "small_rounded"
 
     hide_title_bar:
       enabled: false
