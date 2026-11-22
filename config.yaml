@@ -91,7 +91,7 @@ window_effects:
       enabled: false
       opacity: 90%
     border:
-      enabled: false
+      enabled: true
       color: "#000000"
 
     hide_title_bar:
