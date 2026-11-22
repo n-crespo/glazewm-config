@@ -92,7 +92,7 @@ window_effects:
       opacity: 90%
     border:
       enabled: true
-      color: "#000000"
+      color: "#202020"
 
     hide_title_bar:
       enabled: false
